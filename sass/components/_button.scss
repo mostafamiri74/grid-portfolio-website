@@ -1,0 +1,65 @@
+.btn {
+  &,
+  &:link,
+  &:visited {
+    text-decoration: none;
+    padding: 0.6rem 2rem;
+    display: inline-block;
+
+    font-weight: 600px;
+
+    transition: all 0.2s;
+    position: relative;
+    font-size: $default-font-size;
+
+    //Change for the <button> element
+    cursor: pointer;
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+  }
+
+  &--white {
+    color: $color-white;
+  }
+
+  &--yellow {
+    background-color: $color-primary;
+    color: $color-grey-dark-4;
+    border: 0 !important;
+  }
+}
+
+.btn-text {
+  &:link,
+  &:visited {
+    font-size: $default-font-size;
+    color: $color-primary;
+    display: inline-block;
+    text-decoration: none;
+    padding: 3px;
+    transition: all 0.2s;
+  }
+
+  &::after {
+    content: "\f104"; /* FontAwesome Unicode */
+    font-family: "Font Awesome 5 Free";
+    display: inline-block;
+    position: relative;
+    top: 0.2rem;
+    left: -0.1rem;
+    width: 1.3em; /* same as padding-left set on li */
+    color: $color-primary;
+    margin-right: 0.5rem;
+    font-weight: 600;
+    transition: all 0.5s linear;
+  }
+
+  &:hover {
+    &::after {
+      transform: translate(-0.7rem, 0);
+    }
+  }
+}

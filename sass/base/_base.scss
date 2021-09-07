@@ -1,0 +1,60 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  direction: rtl;
+}
+
+html {
+  // This defines what 1rem is
+  font-size: 62.5%;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  box-sizing: border-box;
+  background-color: #191923;
+  padding: 2rem;
+
+  @media only screen and (max-width: $bp-large) {
+    padding: 8rem 0 0 0;
+  }
+}
+
+.container {
+  display: grid;
+  grid-template-rows: calc(100vh - 4rem);
+  grid-template-columns:
+    [profile-start] 3fr [profile-end main-start] 11fr
+    [main-end];
+}
+
+a {
+  text-decoration: none;
+}
+
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: $color-grey-dark-3;
+  font-size: 1.7rem;
+}
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: $color-grey-dark-3;
+  font-size: 1.7rem;
+}
+:-ms-input-placeholder {
+  /* IE 10+ */
+  color: $color-grey-dark-3;
+  font-size: 1.7rem;
+}
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: $color-grey-dark-3;
+  font-size: 1.7rem;
+}
